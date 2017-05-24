@@ -2,4 +2,4 @@
 
 echo "============================================================"
 echo "== pyflakes =="
-pyflakes wrench
+pyflakes context_temp.py unittests
