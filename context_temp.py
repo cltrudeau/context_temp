@@ -1,4 +1,4 @@
-__version__ = '0.10.0'
+__version__ = '0.11.0'
 
 import contextlib, os, shutil, tempfile
 
@@ -7,9 +7,12 @@ import contextlib, os, shutil, tempfile
 # =============================================================================
 
 @contextlib.contextmanager
-def temp_directory():
+def temp_directory(path=None):
     """This ``Context Manager`` creates a temporary directory and yields its
     path.  Upon exit the directory is removed.
+
+    :param path: optional path for the creation of the directory, otherwise
+        defaults to operating system's default temp file location
 
     Example:
 
@@ -22,7 +25,7 @@ def temp_directory():
 
         # got here? => td is now gone, foo.txt is gone too
     """
-    tempdir = tempfile.mkdtemp()
+    tempdir = tempfile.mkdtemp(dir=path)
     try:
         yield tempdir
     finally:
@@ -30,10 +33,13 @@ def temp_directory():
 
 
 @contextlib.contextmanager
-def temp_file():
+def temp_file(path=None):
     """This ``Context Manager`` creates a temporary file which is readable and
     writable by the current user and yields its path.  Once the ``Context``
     exits, the file is removed.
+
+    :param path: optional path for the creation of the file, otherwise
+        defaults to operating system's default temp file location
 
     Example:
 
@@ -45,7 +51,7 @@ def temp_file():
                 
         # got here? => file called "filename" is now gone
     """
-    _, filename = tempfile.mkstemp()
+    _, filename = tempfile.mkstemp(dir=path)
     try:
         yield filename
     finally:

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=`grep "__version__ = " wrench/__init__.py | cut -d "'" -f 2`
+version=`grep "__version__ = " context_temp.py | cut -d "'" -f 2`
 
 git tag "$version"
 
