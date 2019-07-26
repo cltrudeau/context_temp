@@ -1,3 +1,8 @@
+0.11.1
+======
+
+* minor documentation fixes
+
 0.11.0
 ======
 
