@@ -15,7 +15,7 @@ Installation
 Supports
 ========
 
-context_temp has been tested with Python 2.7, 3.6, 3.7
+context_temp has been tested with Python 3.8-3.11
 
 Docs & Source
 =============

@@ -1,3 +1,9 @@
+0.11.2
+======
+
+* 2023/06/29
+* Changed test suite to Python 3.8-3.11 (Python 2.7-3.7 dropped!)
+
 0.11.1
 ======
 
