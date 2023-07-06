@@ -20,6 +20,6 @@ context_temp has been tested with Python 3.8-3.11
 Docs & Source
 =============
 
-Docs: http://context_temp.readthedocs.io/en/latest/
+Docs: http://context-temp.readthedocs.io/en/latest/
 
 Source: https://github.com/cltrudeau/context_temp
